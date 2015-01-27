@@ -1,9 +1,5 @@
-(function() {
+(function($, _, Backbone) {
   "use strict";
-
-  Backbone = require('Backbone');
-  $ = require('jQuery');
-  _ = require('Underscore');
 
   var app = app || {};
 
@@ -114,4 +110,4 @@
   }));
 
 
-})();
+})(window.$, window._, window.Backbone);
