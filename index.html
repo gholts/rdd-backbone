@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The ever-pleasant Rubber Duck Debugger</title>
+    <meta name="description" content="Ever needed a patient and kind object to bounce ideas off of? Enter the rubber duck debugging method! Simple and effective, talk to the duck and solve your (technical?) problems.">
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@gdholtsla">
+    <meta name="twitter:title" content="Rubber Duck Debugger">
+    <meta name="twitter:description" content="Ever needed a patient and kind object to bounce ideas off of? Enter the rubber duck debugging method! Simple and effective, talk to the duck and solve your (technical?) problems.">
+    <meta name="twitter:creator" content="@gdholtsla">
+    <!-- Twitter Summary card images must be at least 200x200px -->
+    <meta name="twitter:image" content="http://www.rubberduckdebugger.net/img/rubber-duck.jpg">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div class="container" id="duckContainer">
+      <form class="duckForm">
+        <div class="input-group">
+          <input class="form-control" type="text" id="message" autocomplete="off" placeholder="Say something..." />
+          <span class="input-group-btn">
+            <button class="btn btn-primary" type="submit">
+              <span class="glyphicon glyphicon-send"></span>
+            </button>
+          </span>
+        </div>
+      </form>
+      <div id="duckHistory" class="duckHistory">
+        <noscript>Thanks for looking at the Rubber Duck Debugger. Unfortunately, it kinda needs Javascript to run. It's pretty easy to re-enable if you Google it, but if you have it off for some other reason, or you have a really old browser, you may not be able to enjoy the debugger! Sorry!</noscript>
+      </div>
+      <div class="row">
+        <div class="col-md-2">
+          <button id="resetTranscript" class="btn btn-danger">Reset history?</button>
+        </div>
+        <div class="col-md-2">
+          <button id="seeTranscript" class="btn btn-info">See history?</button>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+      <div class="container">
+        &copy;2015 <a href="http://graham.holtslander.com" target="_blank" class="navbar-link">Graham Holtslander</a> - Inspired by <a href="http://www.rubberduckdebugging.com/" target="_blank" class="navbar-link">this great site</a>
+      </div>
+    </nav>
+    <!-- <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/underscore/underscore.js"></script>
+    <script src="node_modules/backbone/backbone.js"></script> -->
+    <script src="bundle.js"></script>
+    <script src="rubberduck.js"></script>
+  </body>
+</html>

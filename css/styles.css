@@ -1,0 +1,18 @@
+.duckHistory {
+    height: 650px;
+    overflow: auto;
+    margin-top: 10px;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+}
+
+.timeText:hover::before {
+    content: "Sent at ";
+}
+
+body {
+    background: url(../img/rubber-duck.jpg) top center no-repeat;
+}

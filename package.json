@@ -1,0 +1,16 @@
+{
+  "name": "rdd-backbone",
+  "version": "0.0.0",
+  "description": "Rubber Duck Debugger, this time in Backbone.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "backbone": "^1.1.2",
+    "underscore": "^1.7.0",
+    "jquery": "^2.1.3"
+  }
+}
