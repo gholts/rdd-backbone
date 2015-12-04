@@ -17,7 +17,7 @@
     chatTemplate: _.template("<%= name %>: <%= content %> <small class='pull-right timeText'><%= timeSent %>"),
 
     render: function() {
-      this.$el.html(this.chatTemplate( this.model.attributes ));
+      this.$el.html(this.chatTemplate(this.model.attributes));
       return this;
     }
   });
@@ -27,19 +27,20 @@
   });
 
   var DuckView = Backbone.View.extend({
+    duckSayings: [
+      "Hmmm.",
+      "Okay.",
+      "I see.",
+      "Alright.",
+      "Interesting.",
+      "OK",
+      "I'm with you.",
+      "Following.",
+      "Huh.",
+    ],
+
     addDuckMessage: function() {
-      var duckSayings = [
-        "Hmmm.",
-        "Okay.",
-        "I see.",
-        "Alright.",
-        "Interesting.",
-        "OK",
-        "I'm with you.",
-        "Following.",
-        "Huh.",
-      ];
-      var message = duckSayings[Math.floor(Math.random() * duckSayings.length)];
+      var message = this.pickDuckMessage();
       app.messageCollection.add(new ChatMessage({content: message}));
     },
 
@@ -74,18 +75,7 @@
     },
 
     pickDuckMessage: function() {
-      var duckSayings = [
-        "Hmmm.",
-        "Okay.",
-        "I see.",
-        "Alright.",
-        "Interesting.",
-        "OK",
-        "I'm with you.",
-        "Following.",
-        "Huh.",
-      ];
-      return duckSayings[Math.floor(Math.random() * duckSayings.length)];
+      return this.duckSayings[Math.floor(Math.random() * this.duckSayings.length)];
     },
 
     addMessage: function( message ) {
